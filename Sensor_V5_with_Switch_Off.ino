@@ -3,8 +3,8 @@
 #include<espnow.h>
 
 
-uint8_t bridgeAddress1[] = {0xNN, 0xNN, 0xNN, 0xNN, 0xNN, 0xNN};   //please update this with the MAC address of your ESP-NOW TO MQTT brigde
-//uint8_t bridgeAddress2[] = {0xNN, 0x4NN, 0xNN, 0xNN, 0xNN, 0xNN};   //please update this with the MAC address of your ESP-NOW TO MQTT brigde
+uint8_t bridgeAddress1[] = {0xNN, 0xNN, 0xNN, 0xNN, 0xNN, 0xNN};   //please update this with the MAC address of your ESP-NOW TO MQTT bridge
+//uint8_t bridgeAddress2[] = {0xNN, 0x4NN, 0xNN, 0xNN, 0xNN, 0xNN};   //please update this with the MAC address of your ESP-NOW TO MQTT bridge
 
 // Set your Board ID (ESP32 Sender #1 = BOARD_ID 1, ESP32 Sender #2 = BOARD_ID 2, etc)
 #define BOARD_ID 20
@@ -57,7 +57,7 @@ void setup() {
   esp_now_set_self_role(ESP_NOW_ROLE_CONTROLLER);
 
   // Once ESPNow is successfully init, we will register for Send CB to
-  // get the status of Trasnmitted packet
+  // get the status of Transmitted packet
   esp_now_register_send_cb(OnDataSent);
 
   // Register peer
